@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,9 +11,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style type="text/css">
+
+h2{
+  color: #ecf0f1;
+  text-shadow: 0px 3px 5px #000000;
+}
 h4{
   color: white;
-  font-family: sans-serif;
+  font-family: 'PT Sans', sans-serif;
 }
 #grad1 {
     -webkit-background-size: cover;
@@ -21,10 +28,21 @@ h4{
     height: 100%;
     background-repeat:no-repeat;
     background: red; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left top, #485563, #29323c); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom right, #485563, #29323c); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom right, #485563, #29323c); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom right, #485563, #29323c); /* Standard syntax (must be last) */
+    background: -webkit-linear-gradient(left top, #fd746c, #ff9068); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #fd746c, #ff9068); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #fd746c, #ff9068); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #fd746c, #ff9068); /* Standard syntax (must be last) */
+}
+
+#grad2{
+  color: white;
+  background: repeating-linear-gradient(
+    45deg,
+    #1abc9c,
+    #1abc9c 10px,
+    #16a085 10px,
+    #16a085 20px
+  );
 }
 
     .box{
@@ -32,32 +50,33 @@ h4{
         display: block;
         margin-right: auto;
         margin-left: auto;
-        margin-bottom: 30px;
-        border: 0.5px solid #bababa;
-        border-radius: 3px;
+        margin-bottom: 40px;
+        border-radius: 0px;
         padding: 7px;
         background: #ffffff;
-        box-shadow: 0px 6px #000000;
+        box-shadow: 0px 3px 2px #304352;
+
 
     }
 	.bs-example{
     	margin: 16px;
       text-align: center;
+      font-family: 'Bree Serif', serif;
 
     }
 </style>
 </head>
 <body id="grad1">
-  <div class="bs-example">
+  <div class="bs-example" >
     <h2 style="color:white">Logo Designs by Hetul</h2><hr>
   </div>
 <div class="bs-example">
     <h4>FashHunt.com (Ahmedabad)</h4>
-    <div class="box">
+    <div class="box" style="padding:0px">
         <img src="1.jpg" class="img-responsive" >
     </div>
     <h4>CasaView (Canada)</h4>
-    <div class="box">
+    <div class="box" style="padding:0px">
         <img src="2.jpg" class="img-responsive" >
     </div>
     <h4>ConnecTex (Surat)</h4>
@@ -69,7 +88,7 @@ h4{
         <img src="4.jpg" class="img-responsive" >
     </div>
     <h4>Health Colors (Pune)</h4>
-    <div class="box">
+    <div class="box" style="padding:0px">
         <img src="5.jpg" class="img-responsive" >
     </div>
     <h4>27 Days Class (Surat)</h4>
@@ -81,7 +100,7 @@ h4{
         <img src="7.jpg" class="img-responsive" >
     </div>
     <h4>Freedom (Mobile App)</h4>
-    <div class="box">
+    <div class="box" style="padding:50px">
         <img src="8.jpg" class="img-responsive" >
     </div>
     <h4>27 Days Class (Surat)</h4>
@@ -89,11 +108,11 @@ h4{
         <img src="9.jpg" class="img-responsive" >
     </div>
     <h4>HYMN (Ahmedabad)</h4>
-    <div class="box">
+    <div class="box" style="padding:2px">
         <img src="10.jpg" class="img-responsive" >
     </div>
     <h4>Sambhav Mind Device (Ahemdabad)</h4>
-    <div class="box">
+    <div class="box" style="padding:2px">
         <img src="11.jpg" class="img-responsive" >
     </div><hr>
     <div class="bs-example">
