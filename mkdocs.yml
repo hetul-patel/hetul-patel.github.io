@@ -15,4 +15,6 @@ nav:
   - education.md
   - contact.md
 extra_css:
-  - stylesheets/extra.css  
+  - stylesheets/extra.css
+extra:
+  generator: false  
