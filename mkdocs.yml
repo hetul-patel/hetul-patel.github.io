@@ -6,3 +6,8 @@ theme:
     primary: white
   font:
     text: Roboto Mono
+
+nav:
+  - index.md
+  - education.md
+  - contact.md
