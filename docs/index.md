@@ -1,17 +1,8 @@
-# Welcome to MkDocs
+# About
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+![image](assets/profile-pic-164.png)
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+<div style="text-align: justify"> I build
+    <span style="color: #7c6ec4; font-weight: bold;"> AI </span><br>
+that helps someone somewhere everyday.
+</div>

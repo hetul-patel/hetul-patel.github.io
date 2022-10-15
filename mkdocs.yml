@@ -1,12 +1,8 @@
 site_name: Hetul Patel
 theme:
   name: material
+  logo: assets/icons8-code-64.png
   palette:
-    primary: black
-# plugins:
-#   - search
-#   - i18n:
-#       default_language: en
-#       languages:
-#         en: English
-#         hi: Hindi
+    primary: white
+  font:
+    text: Roboto Mono
