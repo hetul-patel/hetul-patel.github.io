@@ -6,8 +6,13 @@ theme:
     primary: white
   font:
     text: Roboto Mono
-
+markdown_extensions:
+  - toc:
+      permalink: true
 nav:
   - index.md
+  - experience.md
   - education.md
   - contact.md
+extra_css:
+  - stylesheets/extra.css  

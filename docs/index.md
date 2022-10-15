@@ -1,4 +1,4 @@
-# About
+# Hello! 👋
 
 <!-- profile picture -->
 <img src="assets/profile-pic-512.png" alt="profile-pic" width="164"/>
