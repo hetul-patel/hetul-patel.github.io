@@ -1,0 +1,12 @@
+site_name: Hetul Patel
+theme:
+  name: material
+  palette:
+    primary: black
+# plugins:
+#   - search
+#   - i18n:
+#       default_language: en
+#       languages:
+#         en: English
+#         hi: Hindi

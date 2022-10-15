@@ -1,1 +1,0 @@
-# hetul-patel.github.io
