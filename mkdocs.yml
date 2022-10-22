@@ -4,14 +4,16 @@ theme:
   logo: assets/icons8-code-64.png
   palette:
     primary: white
-  font:
-    text: Roboto Mono
+  # font:
+  #   text: Roboto Mono
 markdown_extensions:
   - toc:
       permalink: true
 nav:
   - index.md
   - experience.md
+  - Projects:
+    - projects/clothes_retrieval.md
   - education.md
   - contact.md
 extra_css:
