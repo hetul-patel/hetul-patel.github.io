@@ -14,6 +14,16 @@ nav:
   - experience.md
   - Projects:
     - projects/clothes_retrieval.md
+    - projects/incremental_learning.md
+    - projects/hyperspectral_image_classification.md
+    - projects/on_device_classification.md
+    - projects/deep_face_recognition.md
+    - projects/small_face_detection.md
+    - projects/alpr.md
+    - projects/mobile_app_for_visually_impaired.md
+    - projects/3d_password.md
+    - projects/mind_controlled_home_automation.md
+  - publications.md
   - education.md
   - contact.md
 extra_css:
