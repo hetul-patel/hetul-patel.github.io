@@ -9,11 +9,11 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
-        <title>Hyperspectral image classification - Hetul Patel</title>
+        <title>Hyper Spectral Image Classification - Hetul Patel</title>
       
     
     
@@ -67,6 +67,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#hyper-spectral-image-classification" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -95,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Hyperspectral image classification
+              Hyper Spectral Image Classification
             
           </span>
         </div>
@@ -272,10 +277,57 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Hyper Spectral Image Classification
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Hyperspectral image classification
+        Hyper Spectral Image Classification
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paper" class="md-nav__link">
+    Paper
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -448,6 +500,37 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paper" class="md-nav__link">
+    Paper
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -462,9 +545,63 @@
                   
 
 
-  <h1>Hyperspectral image classification</h1>
-
-
+<h1 id="hyper-spectral-image-classification">Hyper Spectral Image Classification<a class="headerlink" href="#hyper-spectral-image-classification" title="Permanent link">&para;</a></h1>
+<h2 id="code"><strong>Code</strong><a class="headerlink" href="#code" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/hetul-patel/hyspeclib">Hyspeclib Library</a></li>
+<li><a href="https://drive.google.com/open?id=1hLnw2yNUpvKDbErnlKUZbUSA2DjESjyA">Code Manual</a></li>
+<li><a href="https://drive.google.com/open?id=1PQTapftFkTBi9-NZ1ixLuPSGxkn5h-ZB">Thesis</a></li>
+</ul>
+<h2 id="introduction"><strong>Introduction</strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>Hyperspectral imaging which is also known as imaging
+spectroscopy, detects radiation of earth surface features in
+narrow contiguous spectral regions of the electromagnetic
+spectrum. The Airborne Visible Infrared Imaging
+Spectrometer-Next Generation (AVIRIS-NG) is an
+airborne hyperspectral sensor of NASA’s Jet Propulsion
+Laboratory (JPL) with 425 spectral bands ranging from
+380 nm to 2510 nm with a bandwidth of 5 nm and spatial
+resolution of 4-6 m. </p>
+<p><img src="../../assets/projects/hyperspectral_image_classification/spectral_profile.png" alt="specral_profile"/></p>
+<p>This study aims at pixel-wise
+identification and discrimination of crop types using
+AVIRIS-NG hyperspectral images, with novel Parallel
+Convolutional Neural Networks architecture.</p>
+<p><img src="../../assets/projects/hyperspectral_image_classification/classified.png" alt="specral_profile"/></p>
+<p><img src="../../assets/projects/hyperspectral_image_classification/pcnn.png" alt="specral_profile"/></p>
+<p>To tackle the challenge posed by a large number of correlated
+bands, we compare two band selection techniques using
+Principal Component Analysis (PCA) and back traversal
+of pre-trained Artificial Neural Network (ANN).</p>
+<ul>
+<li>
+<p>Bands selected by PCA method 
+<img src="../../assets/projects/hyperspectral_image_classification/pca_bands.png" alt="specral_profile"/></p>
+</li>
+<li>
+<p>Bands selected by ANN method
+<img src="../../assets/projects/hyperspectral_image_classification/ann_bands.png" alt="specral_profile"/></p>
+</li>
+</ul>
+<p>We also propose an automated technique for augmentation of
+training dataset with a large number of pixels from
+unlabelled parts of an image, based on Euclidian distance.
+Experiments show that bands selected by ANN achieve
+higher accuracy compare to PCA selected bands with
+automated data augmentation.</p>
+<p><img src="../../assets/projects/hyperspectral_image_classification/pca_vs_ann.png" alt="specral_profile"/></p>
+<h2 id="paper"><strong>Paper</strong><a class="headerlink" href="#paper" title="Permanent link">&para;</a></h2>
+<p><a href="https://ieeexplore.ieee.org/abstract/document/8897897">Crop Identification and Discrimination Using AVIRIS-NG Hyperspectral Data Based on Deep Learning Techniques</a></p>
+<pre><code>@INPROCEEDINGS{8897897,
+  author={Patel, Hetul and Bhagia, Nita and Vyas, Tarjni and Bhattacharya, Bimal and Dave, Kinjal},
+  booktitle={IGARSS 2019 - 2019 IEEE International Geoscience and Remote Sensing Symposium}, 
+  title={Crop Identification and Discrimination Using AVIRIS-NG Hyperspectral Data Based on Deep Learning Techniques}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={3728-3731},
+  doi={10.1109/IGARSS.2019.8897897}}
+</code></pre>
 
 
 
@@ -533,10 +670,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>
