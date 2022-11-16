@@ -105,7 +105,7 @@ figure 4.10.
 
 ![png](../../assets/projects/3d_password/4_8.jpg)
 
-![png](../../assets/projects/3d_password/4_8.jpg)
+![png](../../assets/projects/3d_password/4_9.jpg)
 
 ![png](../../assets/projects/3d_password/4_10.jpg)
 
