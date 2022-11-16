@@ -1,12 +1,12 @@
 # Hyper Spectral Image Classification
 
-## **Code**
+## Code
 
 * [Hyspeclib Library](https://github.com/hetul-patel/hyspeclib)
 * [Code Manual](https://drive.google.com/open?id=1hLnw2yNUpvKDbErnlKUZbUSA2DjESjyA)
 * [Thesis](https://drive.google.com/open?id=1PQTapftFkTBi9-NZ1ixLuPSGxkn5h-ZB)
 
-## **Introduction**
+## Introduction
 
 Hyperspectral imaging which is also known as imaging
 spectroscopy, detects radiation of earth surface features in
@@ -49,7 +49,7 @@ automated data augmentation.
 
 <img src="../../assets/projects/hyperspectral_image_classification/pca_vs_ann.png" alt="specral_profile"/>
 
-## **Paper**
+## Paper
 
 [Crop Identification and Discrimination Using AVIRIS-NG Hyperspectral Data Based on Deep Learning Techniques](https://ieeexplore.ieee.org/abstract/document/8897897)
 ```
