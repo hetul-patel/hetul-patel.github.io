@@ -13,7 +13,7 @@
     
     
       
-        <title>Incremental learning - Hetul Patel</title>
+        <title>Auto Adaptive Image Classifier - Hetul Patel</title>
       
     
     
@@ -67,6 +67,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#auto-adaptive-image-classifier" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -95,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Incremental learning
+              Auto Adaptive Image Classifier
             
           </span>
         </div>
@@ -328,10 +333,112 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Auto Adaptive Image Classifier
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Incremental learning
+        Auto Adaptive Image Classifier
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functionalities" class="md-nav__link">
+    Functionalities
+  </a>
+  
+    <nav class="md-nav" aria-label="Functionalities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#homepage" class="md-nav__link">
+    HomePage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-zip-for-one-class" class="md-nav__link">
+    Add Zip for one class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-individual-class-images" class="md-nav__link">
+    View Individual class Images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predict-image" class="md-nav__link">
+    Predict Image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-unknown-class" class="md-nav__link">
+    Add unknown class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recluster" class="md-nav__link">
+    Recluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-group-to-known-classes" class="md-nav__link">
+    Add group to known classes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train-on-new-images" class="md-nav__link">
+    Train on new images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predict-out-of-distribution-classes" class="md-nav__link">
+    Predict out of distribution classes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -476,6 +583,92 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functionalities" class="md-nav__link">
+    Functionalities
+  </a>
+  
+    <nav class="md-nav" aria-label="Functionalities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#homepage" class="md-nav__link">
+    HomePage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-zip-for-one-class" class="md-nav__link">
+    Add Zip for one class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-individual-class-images" class="md-nav__link">
+    View Individual class Images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predict-image" class="md-nav__link">
+    Predict Image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-unknown-class" class="md-nav__link">
+    Add unknown class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recluster" class="md-nav__link">
+    Recluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-group-to-known-classes" class="md-nav__link">
+    Add group to known classes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train-on-new-images" class="md-nav__link">
+    Train on new images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predict-out-of-distribution-classes" class="md-nav__link">
+    Predict out of distribution classes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -490,9 +683,67 @@
                   
 
 
-  <h1>Incremental learning</h1>
-
-
+<h1 id="auto-adaptive-image-classifier">Auto Adaptive Image Classifier<a class="headerlink" href="#auto-adaptive-image-classifier" title="Permanent link">&para;</a></h1>
+<p>Platform similar to google photos which can group similar looking images into albums and can predict labels for the unknown images. Starting with zero known labels, the AI can learn to recognize many different classes on the fly as in when new labelled examples are added.</p>
+<h2 id="functionalities">Functionalities<a class="headerlink" href="#functionalities" title="Permanent link">&para;</a></h2>
+<h3 id="homepage">HomePage<a class="headerlink" href="#homepage" title="Permanent link">&para;</a></h3>
+<ul>
+<li>GridLayout which shows different classes</li>
+</ul>
+<p><img alt="png" src="../../assets/projects/auto_adaptive/image21.png" /></p>
+<h3 id="add-zip-for-one-class">Add Zip for one class<a class="headerlink" href="#add-zip-for-one-class" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Defines popup which takes zip from user and class label to add multiple images with labeled class in database</li>
+</ul>
+<p><img alt="png" src="../../assets/projects/auto_adaptive/image20.png" />
+<img alt="png" src="../../assets/projects/auto_adaptive/image3.png" /></p>
+<h3 id="view-individual-class-images">View Individual class Images<a class="headerlink" href="#view-individual-class-images" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Click on class card to view images for that class</li>
+<li>We can also update the name of class from here</li>
+</ul>
+<p><img alt="png" src="../../assets/projects/auto_adaptive/image14.png" /></p>
+<h3 id="predict-image">Predict Image<a class="headerlink" href="#predict-image" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Defines popup which ask image input from user (only png and jpg allowed) and predict class from existing classes then user can give choice of add predicted label to given image or not</li>
+</ul>
+<p>E.g. We have 5 car images in the database and we will test on unknown car image.</p>
+<p><img alt="png" src="../../assets/projects/auto_adaptive/image10.png" /></p>
+<p>Model predicted below out of training image correctly as a car.</p>
+<p><img alt="png" src="../../assets/projects/auto_adaptive/image16.png" />
+<img alt="png" src="../../assets/projects/auto_adaptive/image19.png" /></p>
+<h3 id="add-unknown-class">Add unknown class<a class="headerlink" href="#add-unknown-class" title="Permanent link">&para;</a></h3>
+<ul>
+<li>We can add a new class without any label. These can be out of distribution images,</li>
+</ul>
+<p><img alt="png" src="../../assets/projects/auto_adaptive/image8.png" /></p>
+<h3 id="recluster">Recluster<a class="headerlink" href="#recluster" title="Permanent link">&para;</a></h3>
+<ul>
+<li>When we click on recluster button, all unknown images are grouped together by their visual similarity.</li>
+</ul>
+<p><img alt="png" src="../../assets/projects/auto_adaptive/image18.png" /></p>
+<h3 id="add-group-to-known-classes">Add group to known classes<a class="headerlink" href="#add-group-to-known-classes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>We can add goup_0 to human verified classes by updating its name.</li>
+</ul>
+<p><img alt="png" src="../../assets/projects/auto_adaptive/image15.png" />
+<img alt="png" src="../../assets/projects/auto_adaptive/image17.png" />
+<img alt="png" src="../../assets/projects/auto_adaptive/image9.png" /></p>
+<h3 id="train-on-new-images">Train on new images<a class="headerlink" href="#train-on-new-images" title="Permanent link">&para;</a></h3>
+<ul>
+<li>To automatically adapt newly added classes we can click the train button.</li>
+<li>Auto adapts new verified classes.</li>
+</ul>
+<p>We can see two pandas images are correctly classified which are not part of training.</p>
+<p><img alt="png" src="../../assets/projects/auto_adaptive/image6.png" />
+<img alt="png" src="../../assets/projects/auto_adaptive/image12.png" /></p>
+<h3 id="predict-out-of-distribution-classes">Predict out of distribution classes<a class="headerlink" href="#predict-out-of-distribution-classes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Classes which the model has never seen will be predicted as unknown.</li>
+<li>We have set a threshold for detecting unknown classes high so that precision can be higher compared to recall.</li>
+<li>Try with a few good quality images for known classes if unknown is suggested.</li>
+</ul>
+<p><img alt="png" src="../../assets/projects/auto_adaptive/image11.png" /></p>
 
 
 
