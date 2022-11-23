@@ -19,7 +19,7 @@ nav:
     - projects/hyperspectral_image_classification.md
     - projects/lecture_notes_saving_app.md
     - projects/spry.md
-    - projects/incremental_learning.md
+    - projects/auto_adaptive.md
     - projects/on_device_classification.md
     - projects/deep_face_recognition.md
     - projects/small_face_detection.md
