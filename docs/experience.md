@@ -17,6 +17,10 @@
 </span>
 <ul>
   <li><span style="color: #8f85cd; font-style: italic;">Neural Machine Translation</span></li>
+   <ul>
+    <li>Developing transformer-based models for program representations and using them for code completion, code repair, and code translation.</li>
+    <li>Developed fully automated and hybrid ML pipelines for data engineering, modeling, evaluation, and deployment that can work on both google's internal infra and google cloud platforms. Some of the frameworks I used were TensorFlow, Kubeflow, KFserving, and Apache Beam.</li>
+   </ul>
   <li><span style="color: #8f85cd; font-style: italic;">Computer vision</span></li>
     <ul>
       <li>The goal was to create a single virtualized view of the electricity system through an aerial view imaginary using an image segmentation model.</li> 
