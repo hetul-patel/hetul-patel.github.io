@@ -364,9 +364,102 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Deep Face Recognition
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Deep Face Recognition
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arcface-loss" class="md-nav__link">
+    Arcface Loss
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasets" class="md-nav__link">
+    Datasets
+  </a>
+  
+    <nav class="md-nav" aria-label="Datasets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#training-dataset" class="md-nav__link">
+    Training dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-dataset" class="md-nav__link">
+    Test dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-normalization" class="md-nav__link">
+    Data normalization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-augmentation" class="md-nav__link">
+    Data augmentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faster-inference" class="md-nav__link">
+    Faster inference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    Deployment
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -501,6 +594,83 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arcface-loss" class="md-nav__link">
+    Arcface Loss
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasets" class="md-nav__link">
+    Datasets
+  </a>
+  
+    <nav class="md-nav" aria-label="Datasets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#training-dataset" class="md-nav__link">
+    Training dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-dataset" class="md-nav__link">
+    Test dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-normalization" class="md-nav__link">
+    Data normalization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-augmentation" class="md-nav__link">
+    Data augmentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faster-inference" class="md-nav__link">
+    Faster inference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    Deployment
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -515,16 +685,104 @@
 
 
 <h1 id="deep-face-recognition">Deep Face Recognition<a class="headerlink" href="#deep-face-recognition" title="Permanent link">&para;</a></h1>
-<p>arcface
-datasets
-data normalisation
-data augmentation(unity and imgaug)
-with mask
-teacher-student(with pre augmented images)
-Platforms
-    tensorrt 
-    openvino 
-    tensorflow lite (post training quantisation)</p>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>Deep face recognition is the technique to identify the identity of a person using only facial images. Generally, a Deep Conv Neural Network (DCNN) is used for transforming an image into fix length high dimensional vector. We usually precompute the embeddings for all the people in our database using a few facial images per person and use it for matching it against an embedding of an unknown face image using distance metrics such as cosine similarity.</p>
+<p>The accuracy of our model depends upon how well it can maximize the distance between two different person's face embeddings and minimize the distance between two face embeddings of the same person.</p>
+<p>A standard approach is to train our model using <a href="https://arxiv.org/pdf/1503.03832.pdf">triplet loss</a> where for each image we prepare a positive image that belongs to the same person and a negative image that belongs to a different person. Although there is a combinatorial explosion in the number of face triplets especially for large-scale datasets, leading to a significant
+increase in the number of iteration steps. Technique such as Hard Negative Mining is used very often with triplet loss to generalize it for challenging face images. Though sampling is quite a hard problem.</p>
+<p><center><img alt="png" src="../../assets/projects/face_recognition/triplet_loss.png" /></center></p>
+<h2 id="arcface-loss">Arcface Loss<a class="headerlink" href="#arcface-loss" title="Permanent link">&para;</a></h2>
+<p>Instead of sampling triplets, I used the <a href="https://arxiv.org/pdf/1801.07698.pdf">Arcface loss</a> which required no sampling at all. Arcface modifies the logit for the target class before calculating softmax cross-entropy loss, such that the model learns to form very close clusters for embeddings of the same class. Specifically, the dot product between the DCNN feature and the last fully connected layer is equal to the cosine distance after feature and center normalization. Arcface utilizes the arc-cosine function to calculate the angle between the current feature and the target center. Afterward, it introduces an additive angular margin
+to the target angle, and we get the target logit back again by the cosine function. Then, it re-scales all logits by a fixed feature norm, and the subsequent steps are the same as in the
+softmax loss. Due to the exact correspondence between the angle and arc in the normalized hypersphere, this method can directly optimize the geodesic distance margin, thus it is called as ArcFace.</p>
+<p><img alt="png" src="../../assets/projects/face_recognition/arcface_archi.png" /></p>
+<h2 id="datasets">Datasets<a class="headerlink" href="#datasets" title="Permanent link">&para;</a></h2>
+<h3 id="training-dataset">Training dataset<a class="headerlink" href="#training-dataset" title="Permanent link">&para;</a></h3>
+<p>For the training, I mixed two datasets by removing overlapping identities using <a href="https://github.com/deepinsight/insightface/tree/master/model_zoo">a pretrained Resnet100</a> model.</p>
+<ol>
+<li><a href="https://paperswithcode.com/paper/ms-celeb-1m-a-dataset-and-benchmark-for-large">MS-Celeb-1M</a> - Around 5.1M images of 93K identities</li>
+<li><a href="http://trillionpairs.deepglint.com/overview">DeepGlint</a> - Around 6.75M images of 181K identities</li>
+</ol>
+<h3 id="test-dataset">Test dataset<a class="headerlink" href="#test-dataset" title="Permanent link">&para;</a></h3>
+<p>For testing, I used two datasets as below,</p>
+<ol>
+<li>
+<p><a href="http://vis-www.cs.umass.edu/lfw/">LFW Benchmark dataset</a>: LFW is a public benchmark for face verification, also known as pair matching. Here we have 50% positive pairs and 50% negative pairs. We calculate PR curve using cosine similarity as a threshold. Although it is just a verification benchmark that only checks whether pair of images are of the same person or not. It is very difficult to extrapolate from performance on verification to performance on 1:N recognition. Many groups are not well represented in LFW. For example, there are very few children, no babies, very few people over the age of 80, and a relatively small proportion of women. In addition, many ethnicities have very minor representation or none at all.</p>
+</li>
+<li>
+<p>I created a custom evaluation dataset balanced using age, gender, ethnicity, image quality, and lighting. Here I tested both the 1:1 face verification and 1:N face recognition performance of my model for three different image quality pairs.</p>
+<ul>
+<li>
+<p><strong>High vs High</strong>: High-quality query images and High-quality database images. It is used for testing best-case scenarios when both enrolled and query images are captured using a high-quality camera.</p>
+</li>
+<li>
+<p><strong>Low vs High</strong>: Low-quality query images and High-quality database images. This tests the real-world scenario where enrolled images are mostly captured using good-quality cameras and in the controlled environment in which query images are often captured using low-quality surveillance cameras. This specifically tests the recall of the model as the chances of rejection are high for a low-quality image.</p>
+</li>
+<li>
+<p><strong>Low vs Low</strong>: Low-quality query images and Low-quality database images. This specifically tests the precision of the model when we enroll low-quality images in the database to decrease the rejection rate. Chances of false-match are high when image quality is not good for both query and database images.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="data-normalization">Data normalization<a class="headerlink" href="#data-normalization" title="Permanent link">&para;</a></h3>
+<p>Empirically it is observed that normalizing face images such that the location of eyes, nose, and lips ends are always almost fixed for the training and evaluation images significantly increases the model's accuracy. For this task, I used a small landmark detection model trained with <a href="https://arxiv.org/abs/1711.06753">wing loss</a> based on standard CNN with an input resolution of 96x96 px on the face crop extracted by a face detection model.</p>
+<p><center><img src="../../assets/projects/face_recognition/face_normalization.png" alt="face_normalization" width=300/></center></p>
+<h3 id="data-augmentation">Data augmentation<a class="headerlink" href="#data-augmentation" title="Permanent link">&para;</a></h3>
+<p>I used two types of data augmentation techniques for better generalization</p>
+<ol>
+<li>
+<p><strong>Offline data augmentation</strong> for pose diversity</p>
+<ul>
+<li>It is very hard to collect a wide range of facial poses in the real world for each identity. I used <a href="https://github.com/YadiraF/PRNet">PRNet</a> to generate a 3D depth map from a single-face image and generate different poses for the same as shown below. The final dataset was balanced by poses. </li>
+</ul>
+<p><center><img src="../../assets/projects/face_recognition/depth.jpg" alt="depth"></center>  <center>Depth estimation</center></p>
+<p><center><img src="../../assets/projects/face_recognition/reconstruct.jpg" alt="reconstruct" width=400></center>  <center>Reconstruct face images with different poses.</center></p>
+</li>
+<li>
+<p><strong>Online data augmentation</strong> for lighting and image quality.</p>
+<ul>
+<li>
+<p>I used <a href="https://imgaug.readthedocs.io/en/latest/">imgaug</a> library which provides a range of image augmentation functions that can be randomly applied to an image during training. Some of the transforms I used were,</p>
+<ul>
+<li><a href="https://imgaug.readthedocs.io/en/latest/source/api_augmenters_flip.html#imgaug.augmenters.flip.Fliplr">Fliplr</a></li>
+<li><a href="https://imgaug.readthedocs.io/en/latest/source/api_augmenters_arithmetic.html#imgaug.augmenters.arithmetic.JpegCompression">JpegCompression</a></li>
+<li><a href="https://imgaug.readthedocs.io/en/latest/source/api_augmenters_blur.html#module-imgaug.augmenters.blur">blur</a></li>
+<li><a href="https://imgaug.readthedocs.io/en/latest/source/api_augmenters_color.html#imgaug.augmenters.color.AddToHue">AddToHue</a></li>
+<li><a href="https://imgaug.readthedocs.io/en/latest/source/api_augmenters_color.html#imgaug.augmenters.color.AddToBrightness">AddToBrightness</a></li>
+</ul>
+<p><center><img src="../../assets/projects/face_recognition/augmentations.png" alt="reconstruct" ></center>  <center>Example of online augmentations.</center>        </p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="faster-inference">Faster inference<a class="headerlink" href="#faster-inference" title="Permanent link">&para;</a></h2>
+<p>As I wanted to deploy my model on the edge devices such as raspberry-pi or smartphone SOCs, I used two techniques to increase speed and reduce model size.</p>
+<ol>
+<li>
+<p><strong>Knowledge distillation</strong></p>
+<p>The model I used for deployment was a custom ResNet50. Training a smaller model from scratch on a large amount of data could lead to an underfitting problem. I designed a knowledge distillation routine in which I transferred the learnings of the pretrained ResNet100 model to the ResNet50. The steps were as shown below.</p>
+<ol>
+<li>Train ResNet100 from scratch on the whole dataset</li>
+<li>Use ResNet100 to precompute outputs of final embedding and intermediate Resnet blocks for the left and right flips of the image.</li>
+<li>Copy weights of the last fully connected layer from pretrained ResNet100 to the initial version of ResNet50.</li>
+<li>Train ResNet50 only on the precomputed dataset and add loss for embedding reconstruction and intermediate features reconstruction loss to the arcface loss.</li>
+</ol>
+<p>This way the embedding generated using ResNet50 is very similar to ResNet100 and it significantly outperforms vanilla ResNet50 trained from scratch.</p>
+</li>
+<li>
+<p><a href="https://www.tensorflow.org/lite/performance/post_training_quantization#full_integer_quantization"><strong>Full integer quantization</strong></a> using TensorFlow lite.</p>
+<p>I used TensorFlow lite's post-training quantization module to convert my float32 model to a full int8 model. For the representative dataset, I balanced images by age, gender, pose, ethnicity, and image quality. This reduced model's size by 4x and inference speed by 5x.</p>
+</li>
+</ol>
+<p>With these two techniques, I was able to infer my model within a second on the slowest hardware such as raspberry pi 3 (1.2 GHz quad-core ARM Cortex-A53) by keeping similar accuracy of a full-fledged ResNet100 deployment on GPU servers.</p>
+<h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
+<p>I used different frameworks to deploy the same model based on hardware specifications. Some of the frameworks I used are listed below. The challenge was to use only supported ops and maintain accuracy after conversion from TensorFlow to custom frameworks. </p>
+<ul>
+<li><a href="https://developer.nvidia.com/tensorrt">NVIDIA TensorRT</a>: For GPU-enabled server deployment, I converted my model to TensorRT plan files. This reduced float32 to float16 and significantly improved inference speed.</li>
+<li><a href="https://www.intel.com/content/www/us/en/developer/tools/openvino-toolkit/overview.html">Intel OpenVino</a>: For intel's CPU-based server deployment, I converted my model to OpenVino's intermediate format. This reduced float32 to int8 using inbuilt quantization with a fallback to float32.</li>
+<li><a href="https://www.tensorflow.org/lite">TensorFlow Lite</a>: For edge devices such as raspberry-pi and smartphones, I used TensorFlow lite to deploy my model.</li>
+</ul>
+<p>I used C++ to write a modular backend where image reading, preprocessing and post-processing functions were common. While the actual inference class was an abstract class where methods were implemented for every hardware using framework-specific methods. It is easy to compile and distribute models in form of a C++ SDK and then to write separate code for each hardware. </p>
 
 
 
