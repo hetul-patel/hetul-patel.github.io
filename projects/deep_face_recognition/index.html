@@ -782,7 +782,7 @@ softmax loss. Due to the exact correspondence between the angle and arc in the n
 <li><a href="https://www.intel.com/content/www/us/en/developer/tools/openvino-toolkit/overview.html">Intel OpenVino</a>: For intel's CPU-based server deployment, I converted my model to OpenVino's intermediate format. This reduced float32 to int8 using inbuilt quantization with a fallback to float32.</li>
 <li><a href="https://www.tensorflow.org/lite">TensorFlow Lite</a>: For edge devices such as raspberry-pi and smartphones, I used TensorFlow lite to deploy my model.</li>
 </ul>
-<p>I used C++ to write a modular backend where image reading, preprocessing and post-processing functions were common. While the actual inference class was an abstract class where methods were implemented for every hardware using framework-specific methods. It is easy to compile and distribute models in form of a C++ SDK and then to write separate code for each hardware. </p>
+<p>I used C++ to write a modular backend where image reading, preprocessing and post-processing functions were common. While the actual inference class was an abstract class implemented for every hardware using framework-specific methods. It is easy to compile and distribute models in form of a C++ SDK and then to write separate code for each hardware. </p>
 
 
 
