@@ -9,6 +9,11 @@
             "language": "markdown",
             "scheme": "file",
             "pattern": "docs/projects/deep_face_recognition.md"
+        },
+        {
+            "language": "markdown",
+            "scheme": "file",
+            "pattern": "docs/projects/alpr.md"
         }
     ]
 }
