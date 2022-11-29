@@ -326,8 +326,83 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#modeling" class="md-nav__link">
+    Modeling
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polygon-detection" class="md-nav__link">
+    Polygon detection
+  </a>
+  
+    <nav class="md-nav" aria-label="Polygon detection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataset-collection_1" class="md-nav__link">
+    Dataset Collection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modeling_1" class="md-nav__link">
+    Modeling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license-plate-recognition" class="md-nav__link">
+    License Plate Recognition
+  </a>
+  
+    <nav class="md-nav" aria-label="License Plate Recognition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataset-collection_2" class="md-nav__link">
+    Dataset collection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modeling_2" class="md-nav__link">
+    Modeling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    Evaluation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    Deployment
+  </a>
   
 </li>
       
@@ -580,8 +655,83 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#modeling" class="md-nav__link">
+    Modeling
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polygon-detection" class="md-nav__link">
+    Polygon detection
+  </a>
+  
+    <nav class="md-nav" aria-label="Polygon detection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataset-collection_1" class="md-nav__link">
+    Dataset Collection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modeling_1" class="md-nav__link">
+    Modeling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license-plate-recognition" class="md-nav__link">
+    License Plate Recognition
+  </a>
+  
+    <nav class="md-nav" aria-label="License Plate Recognition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataset-collection_2" class="md-nav__link">
+    Dataset collection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modeling_2" class="md-nav__link">
+    Modeling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    Evaluation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    Deployment
+  </a>
   
 </li>
       
@@ -602,11 +752,8 @@
 
 <h1 id="automatic-license-plate-recognition">Automatic License Plate Recognition<a class="headerlink" href="#automatic-license-plate-recognition" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p align="justify">
-ALPR/ANPR is an algorithm to recognize the digits of a vehicle number plate using its image. Even though this problem seems a simple optical character recognition task, many traditional solutions fail to achieve good results in real-world conditions as shown below. I developed a custom Deep Learning based solution that not only works with these cases but is also fast enough to deploy on edge devices. I broke down this task into two subtasks, license plate detection, and recognition.
-</p>
-
-<p><center><img alt="png" src="../../assets/projects/anpr/cover.png" /></center></p>
+<p><center><img alt="png" src="../../assets/projects/anpr/flow.png" /></center></p>
+<p>ALPR/ANPR is an algorithm to recognize the digits of a vehicle number plate using its image. Even though this problem seems a simple optical character recognition task, many traditional solutions fail to achieve good results in real-world conditions as shown below. I developed a custom Deep Learning based solution that not only works with these cases but is also fast enough to deploy on edge devices. I broke down this task into two subtasks, license plate detection, and recognition.</p>
 <h2 id="license-plate-detection">License Plate Detection<a class="headerlink" href="#license-plate-detection" title="Permanent link">&para;</a></h2>
 <p>In the first phase, we need an object detection model which can retrieve the bounding box coordinates of a license plate in the input image. </p>
 <p><center><img src="../../assets/projects/anpr/detection.png" width="300px" alt="detection"></center></p>
@@ -614,33 +761,90 @@ ALPR/ANPR is an algorithm to recognize the digits of a vehicle number plate usin
 <p>Since the challenge was to build this model for real-world images, I needed a dataset that has variations in vehicle type, plate type, location of plate, size, shape, etc. I collected a large number of vehicle images and hand-annotated bounding boxed for license plates. Some of the sources I used for collecting data are listed below,</p>
 <ul>
 <li>
-<p><strong>Google images</strong>: Vehicle images with visible license plates from google search</p>
-</li>
-<li>
-<p><strong>Youtube videos</strong>: A large number of channels live stream traffic or street view camera 24/7 on YouTube. I collected a large number of frames containing vehicles by running a vehicle detection model on it.</p>
-<p><center><img alt="png" src="../../assets/projects/anpr/youtube.png" /></center></p>
-</li>
-<li>
 <p><strong>OpenSource Datasets</strong>: I merged all available open-source plate detection datasets which I found such as <a href="https://ai.stanford.edu/~jkrause/cars/car_dataset.html">Cars</a>, <a href="https://github.com/detectRecog/CCPD">CCPD</a> etc. into a large collection of the labeled dataset.</p>
+</li>
+<li>
+<p><strong>Active learning</strong>: I trained my initial model on all the readily available annotated images. Then used this model to generate labels for unknown images and corrected the annotations manually. This way I was able to label a large number of unlabelled images quickly. For active learning, I developed a custom annotation tool using javascript to adjust bounding boxes.</p>
+<p><center><img src="../../assets/projects/anpr/active learning.png" width="450px" alt="active learning"></center></p>
+</li>
+</ul>
+<p>Some of the unlabelled datasets used for active learning are as follows,</p>
+<ul>
+<li>
+<p><strong>Google images</strong>: Vehicle images with visible license plates from google search.</p>
+</li>
+<li>
+<p><strong>Youtube videos</strong>: A large number of channels live stream traffic or street view cameras 24/7 on YouTube. I collected a large number of frames containing vehicles by running a vehicle detection model on it.</p>
+<p><center><img alt="png" src="../../assets/projects/anpr/youtube.png" /></center></p>
 </li>
 <li>
 <p><a href="https://idd.insaan.iiit.ac.in/dataset/details/"><strong>India Driving Dataset</strong></a>: Around 10k Indian street view images captured from a front-facing camera attached to a car.</p>
 <p><center><img alt="png" src="../../assets/projects/anpr/idd.png" /></center></p>
 </li>
+</ul>
+<h3 id="modeling">Modeling<a class="headerlink" href="#modeling" title="Permanent link">&para;</a></h3>
+<p><center><img alt="png" src="../../assets/projects/anpr/yolov3.jpg" /></center></p>
+<p>I used <a href="https://github.com/YunYang1994/tensorflow-yolov3">tensorflow-yolov3</a> repo to train my custom yolov3 model. YoloV3 is a single-shot detector that can detect objects of multiple scales in a single pass. I made a couple of modifications as per my use-case as below,</p>
+<ul>
+<li>Since I only needed to predict a single class, I reduced the number of channels for each layer by at least 8x. This way I was able to fit my model on edge devices.</li>
+<li>I used multiscale training where instead of training the model on a fixed input resolution, we choose a random input resolution for each batch. e.g I trained my model on batches varying in input resolutions from 128x128, 256x256, 512x512, and 768x768 pixels. This way I could use the same model for different input sizes based on latency requirements as higher resolution takes more inference time.</li>
+<li>For the prediction layer, I used the encoding method proposed by the <a href="https://arxiv.org/abs/1512.02325">SSD paper</a> since the TensorFlow-lite library has an inbuilt Op called <code>TFLite_Detection_PostProcess</code> for SSD style decoding and NMS, and thus it was easy to convert the entire model to tflite format later for edge deployment.</li>
+<li>For bounding box regression I used <a href="https://giou.stanford.edu/GIoU.pdf">Generelized IOU</a> loss instead of standard box regression and for classification, I used the <a href="https://arxiv.org/abs/1708.02002">Focal Loss</a> to tackle the class imbalance problem.</li>
+<li>For data augmentation, I used <a href="https://imgaug.readthedocs.io/en/latest/source/examples_bounding_boxes.html">imgaug</a> library which preserves the location of the bounding box after applying affine transformations.</li>
+<li>Apart from standard augmentations, I designed a scale-oriented augmentation in which we choose a random bounding box from the image and randomly crop 10-90% image around it. This way we make sure our model sees all the different scales of the license plate. </li>
+</ul>
+<h2 id="polygon-detection">Polygon detection<a class="headerlink" href="#polygon-detection" title="Permanent link">&para;</a></h2>
+<p>Our license plate detection model only predicts rectangular bounding boxes. For recognition, we need to correct issues like rotation and skewness using a perspective transformation as shown below. For this, we need the coordinates of the 4 corners. </p>
+<p><center><img src="../../assets/projects/anpr/perspective_transform.png" width="300px" alt="perspective_transform"></center></p>
+<h3 id="dataset-collection_1">Dataset Collection<a class="headerlink" href="#dataset-collection_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>I used <a href="https://github.com/detectRecog/CCPD">CCPD</a> dataset as it contains polygon annotations for license plates.</li>
+<li>The CCPD only contained blue color Chinese number plates. To generalize better, I replaced the original plate images with other country number plates using OpenCV's <a href="https://www.geeksforgeeks.org/perspective-transformation-python-opencv/">perspective transform</a>.</li>
+</ul>
+<p><center><img src="../../assets/projects/anpr/ccpd.jpg" width="400px" alt="ccpd"></center></p>
+<h3 id="modeling_1">Modeling<a class="headerlink" href="#modeling_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>I trained a very small CNN model which directly regresses these 8 values (x and y coordinates of all the 4 points) given a crop of license plates. </li>
+<li>Additionally, I predicted the probability of the license plate filtering out false positives. </li>
+<li>I used <a href="https://arxiv.org/abs/1711.06753">wing loss</a> instead of standard MSE loss to weigh hard examples more compared to the easier ones.</li>
+</ul>
+<h2 id="license-plate-recognition">License Plate Recognition<a class="headerlink" href="#license-plate-recognition" title="Permanent link">&para;</a></h2>
+<p>After detecting and correcting the angle and skewness of the license plate, in the third stage, we need to extract the license plate number from the crop. The license plates can be single lines or multi-line. Also, the variability in lighting conditions, background noise, fonts and font size, etc. results in very poor recognition accuracy for standard image processing-based approaches. So I trained a model which can predict both single and multiline license plates directly from the RGB image crop.</p>
+<h3 id="dataset-collection_2">Dataset collection<a class="headerlink" href="#dataset-collection_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Similar to the detection task, I started with CCPD and other open-source datasets which contained string-level annotations for plate images.</li>
+<li>Then used an active learning technique to iteratively predict and refine labels for unlabelled images to increase the dataset size. With active learning, I was able to collect around 30k labeled license plate crops.</li>
+<li>The problem with this data was the class imbalance at the character level. Since the model does not see all the characters equally, it misclassified low-frequency characters often. E.g. 0&lt;-&gt;8, 1&lt;-&gt;7 etc. To overcome this issue, I synthetically generated license plate images with different backgrounds and styles keeping the total frequency of each character equal across the entire dataset. I used this data to train the model from scratch and then finetuned it with real data which increased the overall accuracy by more than 20%.</li>
 <li>
-<p><strong>Active learning</strong>: I trained my initial model on all the readily available annotated images. Then use this model to generate labels for unknown images and correct the annotations manually. This way I was able to label a large number of unlabelled images quickly. For active learning, I developed a custom annotation tool using javascript to adjust bounding boxes.</p>
-<p><center><img src="../../assets/projects/anpr/active learning.png" width="450px" alt="active learning"></center></p>
+<p>I also designed a 3D version of an Indian license plate in a blender similar to as shown below and rendered different views of it by changing characters for every render using python and blender integration. This way I was able to improve the model's accuracy on country-specific plates.</p>
+<p><center><img src="../../assets/projects/anpr/blender.png" alt="blender"></center></p>
 </li>
 </ul>
-<!-- polygon prediction
-
-recognition
-    data preparation (indian images)
-    data augmentation (blender, augmentation)
-    semi supervision
-    model (CNN + CTC)
-    evaluation
- -->
+<h3 id="modeling_2">Modeling<a class="headerlink" href="#modeling_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>I designed a custom CNN + <a href="https://distill.pub/2017/ctc/">CTC decoder</a> based model for recognition.</li>
+<li>The input of the model was semi-rectangular (width 128 and height 256) such that we can fit both single and multiline number plates in the input placeholder padded by zeros.</li>
+<li>The model extracts features from the upper and lower image and then concatenates both in a single row such that we have an output of shape (H:1, W:64, C:37). Channels refer to the number of possible characters for each position and 64 is the maximum string length the model can predict.</li>
+<li>CTC loss was used to directly train the model on unaligned image-and-text pairs. The model learns to output one character for every 64 positions such that the final string matches our desired string by predicting other characters as blank.
+During inference, the CTC beam search decoder was used for better accuracy.</li>
+<li>I implemented my <a href="https://github.com/hetul-patel/ctc_beam_search_decoder">own CTC decoder</a> in C++ with a python wrapper as frameworks like TensorflowLite and OpenVINO did not support the beam search decoding op for edge deployment.</li>
+</ul>
+<h2 id="evaluation">Evaluation<a class="headerlink" href="#evaluation" title="Permanent link">&para;</a></h2>
+<p>To test the model's performance with existing solutions I compared my model to two openly available commercial solutions on Indian and mix country number plates.</p>
+<p><center><img alt="png" src="../../assets/projects/anpr/cover.png" /></center></p>
+<ol>
+<li><a href="https://platerecognizer.com/">Plate Recognizer</a>: The model was able to achieve higher accuracy for both detection and recognition tasks compared to results extracted from the plate recognizer's online demo.
+late recognizer solution.</li>
+<li><a href="">OpenALPR Benchmark</a>: This company published a benchmark of 100 challenging images on which the model was able to achieve 98% accuracy.  </li>
+</ol>
+<h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
+<p>I used different frameworks to deploy the same model based on hardware specifications. Some of the frameworks I used are listed below. The challenge was to use only supported ops and maintain accuracy after conversion from TensorFlow to custom frameworks. </p>
+<ul>
+<li><a href="https://developer.nvidia.com/tensorrt">NVIDIA TensorRT</a>: For GPU-enabled server deployment, I converted my model to TensorRT plan files. This reduced float32 to float16 and significantly improved inference speed.</li>
+<li><a href="https://www.intel.com/content/www/us/en/developer/tools/openvino-toolkit/overview.html">Intel OpenVino</a>: For intel's CPU-based server deployment, I converted my model to OpenVino's intermediate format. This reduced float32 to int8 using inbuilt quantization with a fallback to float32.</li>
+<li><a href="https://www.tensorflow.org/lite">TensorFlow Lite</a>: For edge devices such as raspberry-pi and smartphones, I used TensorFlow lite to deploy my model.</li>
+</ul>
+<p>I used C++ to write a modular backend where image reading, preprocessing and post-processing functions were common. While the actual inference class was an abstract class implemented for every hardware using framework-specific methods. It is easy to compile and distribute models in form of a C++ SDK and then to write separate code for each hardware. </p>
 
 
 
