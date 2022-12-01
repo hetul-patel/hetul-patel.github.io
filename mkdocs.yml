@@ -16,13 +16,13 @@ nav:
     - projects/clothes_retrieval.md
     - projects/deep_face_recognition.md
     - projects/alpr.md
+    - projects/on_device_classification.md
     - projects/auto_adaptive.md
     - projects/mind_controlled_home_automation.md
     - projects/hyperspectral_image_classification.md
     - projects/lecture_notes_saving_app.md
     - projects/3d_password.md
     - projects/spry.md
-    - projects/on_device_classification.md
     - projects/mobile_app_for_visually_impaired.md
   - talks.md
   - publications.md

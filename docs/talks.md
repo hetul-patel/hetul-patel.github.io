@@ -1,4 +1,4 @@
-# Talks/Seminars/Workshops
+# Talks/Seminars
 
 I love sharing my learnings from the ML industry with the college students through invited lectures or talks. All the slides of my talks/sessions can be found below.
 
