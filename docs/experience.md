@@ -99,7 +99,6 @@ Matrix ComSec is a leader in Security and Telecom solutions for modern businesse
 SAC being the major R&D center of ISRO designs and develops the optical and microwave sensors for the satellites, signal and image processing software, GIS software, and many applications for the Earth Observation (EO) program of ISRO. As a Research Intern, I developed DL techniques for accurate crop classification using Hyper Spectral Satellite images (425 channels per pixel). My primary contributions were as listed below
 <ul>
     <li>Developed ANN-based dimensionality reduction technique which retained useful features and worked better than PCA.</li> 
-    <li>Developed FR algorithm with 99.85 % accuracy on the LFW benchmark.</li>
     <li>Developed virtual data augmentation technique for overcoming the issue of insufficient ground truth data of different crops for training.</li>
     <li>Provided detailed comparative analysis of ANN, CNN, and SVM. Designed highly accurate Parallel-CNNs architecture for classifying nearly inseparable classes based on interclass separability analysis.
     <li>Developed Python library based on my work so that other scientists can use these techniques on a variety of other satellite images.</li>
