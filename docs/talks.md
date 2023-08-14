@@ -4,6 +4,12 @@ I love sharing my learnings from the ML industry with others through invited lec
 
 ![png](../../assets/senimars.jpeg)
 
+* Delivered an expert talk on [**Hands-on on Language Modeling using Coventional and Deep Learning Approaches**](https://colab.research.google.com/drive/1EKvE5lBIq23gaNKcqfxga1HAeNbs7jAO) at [**ISTE Approved STTP on "Deep Learning: Concepts to Deployment"**](https://iqac.nirmauni.ac.in/) Organized by CSE Department, Institute of Technology, Nirma University – Internal Quality Assurance Cell (IQAC), 7 July, 2023.
+
+* Conducted expert session on [**NLP using Deep Learning**](https://colab.research.google.com/drive/1bumUd6nKL-Ja5eep9zP4NIXRAzI-nHVV) for students of Computer Science at [**Nirma University, Ahmedabad**](https://nirmauni.ac.in/), 20 March, 2023.
+ 
+* Spoke on [**"Introduction Accelerators and NVIDIA RAPIDS for Datascience on GPU"**](https://docs.google.com/presentation/d/1guNgXf1hja6FOkqdN-NeogJ8Ox1hcKo-mv2ewVrr998/edit#slide=id.g1bebad4f5fd_0_205) where I explained concepts such as working of GPUs, TPUs, and hands-on on cuDF and cuML libraries at  [**Machine Learning Ahmedabad Meetup, Infocusp, Ahmedabad**](https://www.meetup.com/ahmedabad-ml-meetup/), 24 Dec, 2022.
+
 
 * Spoke on [**"Introduction Accelerators and NVIDIA RAPIDS for Datascience on GPU"**](https://docs.google.com/presentation/d/1guNgXf1hja6FOkqdN-NeogJ8Ox1hcKo-mv2ewVrr998/edit#slide=id.g1bebad4f5fd_0_205) where I explained concepts such as working of GPUs, TPUs, and hands-on on cuDF and cuML libraries at  [**Machine Learning Ahmedabad Meetup, Infocusp, Ahmedabad**](https://www.meetup.com/ahmedabad-ml-meetup/), 24 Dec, 2022.
 

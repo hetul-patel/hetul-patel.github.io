@@ -13,13 +13,13 @@
     </span>
 </h4>
 <span style="color: #000000">
-    Client: <a href="https://x.company/">Google-X, the Moonshot Factory </a>(Confidential Research Project) 
+    Client: (Confidential Research Project) 
 </span>
 <ul>
-  <li><span style="color: #8f85cd; font-style: italic;">Neural Machine Translation</span></li>
+  <li><span style="color: #8f85cd; font-style: italic;">Large Language Models for Code Synthesis</span></li>
    <ul>
     <li>Developing transformer-based models for program representations and using them for code completion, code repair, and code translation.</li>
-    <li>Developed fully automated and hybrid ML pipelines for data engineering, modeling, evaluation, and deployment that can work on both google's internal infra and google cloud platforms. Some of the frameworks I used were TensorFlow, Kubeflow, KFserving, and Apache Beam.</li>
+    <li>Developed fully automated and hybrid ML pipelines for data engineering, modeling, evaluation, and deployment that can work on both client's private infra and GCP. Some of the frameworks I used were TensorFlow, Kubeflow, KFserving, and Apache Beam.</li>
    </ul>
   <li><span style="color: #8f85cd; font-style: italic;">Computer vision</span></li>
     <ul>
