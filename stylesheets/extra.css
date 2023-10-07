@@ -2,3 +2,7 @@
     font-family: 'Roboto Mono', monospace;
     src: "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap";
 }
+
+:root > * {
+    --md-code-bg-color: #F7F6F3;
+}
