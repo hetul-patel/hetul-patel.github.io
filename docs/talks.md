@@ -6,7 +6,7 @@ I love sharing my learnings from the ML industry with others through invited lec
 
 ![png](../../assets/senimars.jpeg)
 
-* Conducted a full day workshop on [**Software Engineering Essentials**](https://www.canva.com/design/DAFwIR0Y0fM/nzVJqvSrYXh94Yu04u152w/view?utm_content=DAFwIR0Y0fM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) for more than 100 students from sophomore and final year at [**Marwadi University, Rajkot"**](https://www.marwadiuniversity.ac.in/), 5 Oct, 2023.
+* Conducted a full day workshop on [**Software Engineering Essentials**](https://www.canva.com/design/DAFwIR0Y0fM/nzVJqvSrYXh94Yu04u152w/view?utm_content=DAFwIR0Y0fM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) for more than 100 students from sophomore and final year at [**Marwadi University, Rajkot**](https://www.marwadiuniversity.ac.in/), 5 Oct, 2023.
 
 
 * Delivered an expert talk on [**Hands-on on Language Modeling using Coventional and Deep Learning Approaches**](https://colab.research.google.com/drive/1EKvE5lBIq23gaNKcqfxga1HAeNbs7jAO) at [**ISTE Approved STTP on "Deep Learning: Concepts to Deployment"**](https://iqac.nirmauni.ac.in/) Organized by CSE Department, Institute of Technology, Nirma University – Internal Quality Assurance Cell (IQAC), 7 July, 2023.

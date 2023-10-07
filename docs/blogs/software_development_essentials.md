@@ -5,7 +5,7 @@ This is a comprehensive guide that covers a range of important topics and tools 
 !!! note
     Python is used as an example in this blog, but you can apply these concepts to any widely used programming language for development.
 
-## 1. Remote First Developmengrt
+## 1. Remote First Development
 
 !!! tip
     Say goodbye to running code locally 👋 !! 
