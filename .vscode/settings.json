@@ -24,6 +24,11 @@
             "language": "markdown",
             "scheme": "file",
             "pattern": "docs/talks.md"
+        },
+        {
+            "language": "markdown",
+            "scheme": "file",
+            "pattern": "docs/blogs/software_development_essentials.md"
         }
     ]
 }

@@ -4,14 +4,26 @@ theme:
   logo: assets/icons8-code-64.png
   palette:
     primary: white
+  features:
+    - content.code.copy
   # font:
   #   text: Roboto Mono
 markdown_extensions:
   - toc:
       permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences      
+  - admonition
 nav:
   - index.md
   - experience.md
+  - Blogs:
+    - blogs/software_development_essentials.md
   - Projects:
     - projects/clothes_retrieval.md
     - projects/deep_face_recognition.md
@@ -30,5 +42,6 @@ nav:
   - contact.md
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/neoteroi-mkdocs.css  
 extra:
-  generator: false  
+  generator: false
